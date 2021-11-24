@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER"
+      spacing="25.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="default_group.file_transfer_app.AttemptToUploadFilesScreenController">
+
+    <padding>
+        <Insets topRightBottomLeft="50.0"/>
+    </padding>
+
+    <Label text="Select each file, one at a time, that you wish to upload to the recipient." wrapText="true"/>
+
+    <Label fx:id="currentSelectedFileLabel"/>
+
+    <Label fx:id="currentStatusLabel"/>
+
+    <Button text="Choose file..." onAction="#onChooseFileButtonClick"/>
+
+    <Button text="Start upload" fx:id="startFileUploadButton" onAction="#onStartFileUploadButtonClick"/>
+
+    <ProgressBar fx:id="fileUploadProgressBar"/>
+
+    <Label fx:id="fileUploadProgressPercentageLabel"/>
+
+    <Button text="⬅ Establish new connection" onAction="#onGoBackToConnectToRecipientScreenButtonClick"/>
+
+</VBox>

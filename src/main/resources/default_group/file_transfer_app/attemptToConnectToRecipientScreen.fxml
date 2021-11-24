@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER"
+      spacing="25.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="default_group.file_transfer_app.AttemptToConnectToRecipientScreenController">
+
+    <padding>
+        <Insets topRightBottomLeft="50.0"/>
+    </padding>
+
+    <Label text="First, let's attempt to establish a connection with the recipient device." wrapText="true"/>
+
+    <Label text="Recipient IPv4 address:"/>
+
+    <TextField fx:id="userEnteredIpv4AddressField"/>
+
+    <Label text="Port number:"/>
+
+    <TextField fx:id="userEnteredPortNumberField"/>
+
+    <Label fx:id="currentStatusLabel"/>
+
+    <Button fx:id="attemptToConnectButton" text="Connect" onAction="#onAttemptToEstablishConnectionButtonClick"/>
+
+    <Button text="⬅ Change mode" onAction="#onGoBackToStartScreenButtonClick"/>
+
+</VBox>

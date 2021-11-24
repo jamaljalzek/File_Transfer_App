@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER"
+      spacing="25.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="default_group.file_transfer_app.AttemptToReceiveConnectionScreenController">
+
+    <padding>
+        <Insets topRightBottomLeft="50.0"/>
+    </padding>
+
+    <Label text="First, let's receive any connection attempt from the uploading device." wrapText="true"/>
+
+    <Label text="Detected IPv4 address(es) for this device:"/>
+
+    <ListView fx:id="listViewOfDeviceIpv4Addresses"/>
+
+    <Label text="Port number:"/>
+
+    <TextField fx:id="userEnteredPortNumberField"/>
+
+    <Label fx:id="currentStatusLabel"/>
+
+    <Button text="Listen for connection" onAction="#onAttemptToReceiveConnectionButtonClick"/>
+
+    <Button text="⬅ Change mode" onAction="#onGoBackToStartScreenButtonClick"/>
+
+</VBox>
